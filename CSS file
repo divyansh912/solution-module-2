@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Menu</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1em;
+    }
+
+    section {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .menu-item {
+      border: 1px solid #ddd;
+      margin-bottom: 20px;
+      padding: 15px;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    .price {
+      color: #e44d26;
+      font-weight: bold;
+    }
+
+    p {
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Food Menu</h1>
+  </header>
+
+  <section>
+    <div class="menu-item">
+      <h2>Chicken Burger</h2>
+      <p>Grilled chicken patty with lettuce, tomato, and mayonnaise.</p>
+      <p class="price">$8.99</p>
+    </div>
+
+    <div class="menu-item">
+      <h2>Margherita Pizza</h2>
+      <p>Fresh tomatoes, mozzarella, and basil on a thin crust.</p>
+      <p class="price">$12.99</p>
+    </div>
+
+    <div class="menu-item">
+      <h2>Caesar Salad</h2>
+      <p>Romaine lettuce, croutons, Parmesan cheese, and Caesar dressing.</p>
+      <p class="price">$6.99</p>
+    </div>
+  </section>
+
+</body>
+</html>
