@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Food Menu</title>
+  <title>Responsive Layout</title>
   <style>
     body {
       font-family: 'Arial', sans-serif;
@@ -19,60 +19,96 @@
       padding: 1em;
     }
 
-    section {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
+    main {
+      max-width: 1200px;
+      margin: 20px auto;
     }
 
-    .menu-item {
-      border: 1px solid #ddd;
-      margin-bottom: 20px;
-      padding: 15px;
-      background-color: #fff;
+    section {
+      background-color: #f9f9f9;
+      margin: 10px;
+      padding: 20px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border: 1px solid #000;
       border-radius: 8px;
+      position: relative;
+    }
+
+    section-title {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: #3498db;
+      color: #fff;
+      padding: 8px 16px;
+      border: 1px solid #000;
+      border-bottom: none;
+      border-radius: 8px 0 0 0;
     }
 
     h2 {
       color: #333;
-    }
-
-    .price {
-      color: #e44d26;
-      font-weight: bold;
+      margin-top: 20px; /* Push down the text to avoid overlapping with the title region */
     }
 
     p {
       color: #666;
+    }
+
+    /* Desktop view */
+    @media only screen and (min-width: 992px) {
+      section {
+        float: left;
+        width: 30%;
+      }
+    }
+
+    /* Tablet view */
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      section {
+        width: 48%;
+      }
+
+      section:nth-child(3) {
+        clear: both;
+        width: 100%;
+      }
+    }
+
+    /* Mobile view */
+    @media only screen and (max-width: 767px) {
+      section {
+        width: 100%;
+      }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Food Menu</h1>
+    <h1>Responsive Layout</h1>
   </header>
 
-  <section>
-    <div class="menu-item">
-      <h2>Chicken Burger</h2>
-      <p>Grilled chicken patty with lettuce, tomato, and mayonnaise.</p>
-      <p class="price">$8.99</p>
-    </div>
+  <main>
+    <section>
+      <section-title>Chicken</section-title>
+      <h2>Section 1</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </section>
 
-    <div class="menu-item">
-      <h2>Margherita Pizza</h2>
-      <p>Fresh tomatoes, mozzarella, and basil on a thin crust.</p>
-      <p class="price">$12.99</p>
-    </div>
+    <section>
+      <section-title>Beef</section-title>
+      <h2>Section 2</h2>
+      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum.</p>
+    </section>
 
-    <div class="menu-item">
-      <h2>Caesar Salad</h2>
-      <p>Romaine lettuce, croutons, Parmesan cheese, and Caesar dressing.</p>
-      <p class="price">$6.99</p>
-    </div>
-  </section>
+    <section>
+      <section-title>Sushi</section-title>
+      <h2>Section 3</h2>
+      <p>Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
+    </section>
+  </main>
 
 </body>
 </html>
+
